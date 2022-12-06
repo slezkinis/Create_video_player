@@ -16,21 +16,26 @@
       background-color: black;
       display: flex;
       flex-direction: row;
-      flex-grow: 1;
+      align-items: center;
     }
     .video_player-button {
       border: none;
       cursor: pointer;
       color: white;
       background-color: transparent;
-      font-size: 120%;
-      line-height: 70%;
+      font-size: 20px;
+    }
+    .video_container {
+      flex-grow: 1;
+    }
+    .blank_div {
+      flex-grow: 4;
     }
   </style>
 </head>
 <body>
   <div id="player" class="video_player">
-    <div class="js-video-container" style="flex-grow: 111;"></div>
+    <div class="js-video-container video_container"></div>
     <div class="video_player-buttons_block">
       <button class="js-play-button video_player-button">
         <i class="fa fa-play" aria-hidden="true" style="margin: 5px;"></i>
@@ -44,7 +49,7 @@
       <button class="js-mute-button video_player-button">
         <i class="fa fa-volume-up" aria-hidden="true" style="margin: 5px;"></i>
       </button>
-      <div style="flex-grow: 4;"></div>
+      <div class="blank_div"></div>
       <button class="js-fullscreen-button video_player-button">
         <i class="fa fa-arrows-alt" aria-hidden="true" style="margin: 5px;"></i>
       </button>
