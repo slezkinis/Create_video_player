@@ -5,7 +5,20 @@
   <title>Пример подключения плеера</title>
   <meta charset="utf-8">
   <style>
-    .video-player-button {
+    .video_player {
+      width: 800px;
+      height: 600px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+    }
+    .video_player-buttons_block {
+      background-color: black;
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+    }
+    .video_player-button {
       border: none;
       cursor: pointer;
       color: white;
@@ -16,23 +29,23 @@
   </style>
 </head>
 <body>
-  <div id="player" style="width: 800px; height: 600px; box-shadow: 0 0 10px rgba(0,0,0,0.5); display: flex; flex-direction: column; ">
+  <div id="player" class="video_player">
     <div class="js-video-container" style="flex-grow: 111;"></div>
-    <div style="background-color:black; display: flex; flex-direction: row; flex-grow: 1;">
-      <button class="js-play-button video-player-button">
+    <div class="video_player-buttons_block">
+      <button class="js-play-button video_player-button">
         <i class="fa fa-play" aria-hidden="true" style="margin: 5px;"></i>
       </button>
-      <button class="js-pause-button video-player-button">
+      <button class="js-pause-button video_player-button">
         <i class="fa fa-pause" aria-hidden="true" style="margin: 5px;"></i>
       </button>
-      <button class="js-volume-button video-player-button">
+      <button class="js-volume-button video_player-button">
         <i class="fa fa-volume-off" aria-hidden="true" style="margin: 5px;"></i>
       </button>
-      <button class="js-mute-button video-player-button">
+      <button class="js-mute-button video_player-button">
         <i class="fa fa-volume-up" aria-hidden="true" style="margin: 5px;"></i>
       </button>
       <div style="flex-grow: 4;"></div>
-      <button class="js-fullscreen-button video-player-button">
+      <button class="js-fullscreen-button video_player-button">
         <i class="fa fa-arrows-alt" aria-hidden="true" style="margin: 5px;"></i>
       </button>
     </div>
