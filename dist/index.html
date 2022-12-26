@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <head>
   <title>Пример подключения плеера</title>
   <meta charset="utf-8">
@@ -30,8 +32,12 @@
     .video_container {
       flex-grow: 1;
     }
-    .blank_div {
+    .video_scroller {
       flex-grow: 4;
+    }
+    .video_player-time {
+      color: white;
+      font-family: 'Roboto', sans-serif;
     }
   </style>
 </head>
@@ -51,7 +57,11 @@
       <button class="js-mute-button video_player-button">
         <i class="fa fa-volume-up" aria-hidden="true"></i>
       </button>
-      <div class="blank_div"></div>
+      <div class="video_scroller">
+        <div class="video_player-time">
+          <span class="js-current-time"></span>
+        </div>
+      </div>
       <button class="js-fullscreen-button video_player-button">
         <i class="fa fa-arrows-alt" aria-hidden="true"></i>
       </button>
