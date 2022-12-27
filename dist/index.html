@@ -55,6 +55,9 @@
       border-radius: 30px;
     }
     .dot {
+      transition-timing-function: ease-out;
+      transition-duration: 300ms;
+      opacity: 0;
       height: 5px;
       width: 5px;
       background-color: red;
@@ -63,7 +66,21 @@
       border-style: solid;
       border-width: 3px;
       border-color: white;
-      margin-top: -2px;
+      margin-top: -3px;
+    }
+    .video_player-buttons_block:hover .dot {
+      transition-timing-function: ease-in;
+      transition-duration: 300ms;
+      opacity: 1;
+      height: 5px;
+      width: 5px;
+      background-color: red;
+      border-radius: 50%;
+      display: inline-block;
+      border-style: solid;
+      border-width: 3px;
+      border-color: white;
+      margin-top: -3px;
     }
   </style>
 </head>
