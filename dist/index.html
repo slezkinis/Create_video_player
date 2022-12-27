@@ -10,7 +10,7 @@
     .video_player {
       width: 800px;
       height: 601px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      box-shadow: 0 0 45px rgba(0,0,0,0.8);
       display: flex;
       flex-direction: column;
     }
@@ -32,12 +32,38 @@
     .video_container {
       flex-grow: 1;
     }
-    .video_scroller {
-      flex-grow: 4;
+    .blank_div {
+      flex-grow: 2;
     }
     .video_player-time {
       color: white;
       font-family: 'Roboto', sans-serif;
+    }
+    .video_progress {
+      display: flex;
+      flex-direction: row;
+      background-color: grey;
+      width: 120px;
+      height: 5px;
+      border-radius: 20px;
+      margin-left: 10px;
+    }
+    .video_progress_bar {
+      background-color: red;
+      width: 120px;
+      height: 5px;
+      border-radius: 30px;
+    }
+    .dot {
+      height: 5px;
+      width: 5px;
+      background-color: red;
+      border-radius: 50%;
+      display: inline-block;
+      border-style: solid;
+      border-width: 3px;
+      border-color: white;
+      margin-top: -2px;
     }
   </style>
 </head>
@@ -57,11 +83,14 @@
       <button class="js-mute-button video_player-button">
         <i class="fa fa-volume-up" aria-hidden="true"></i>
       </button>
-      <div class="video_scroller">
-        <div class="video_player-time">
-          <span class="js-current-time"></span>
-        </div>
+      <div class="video_player-time">
+        <span class="js-current-time"></span>
       </div>
+      <div class="js-progress video_progress">
+        <div class="js-progress-slider video_progress_bar"></div>
+        <span class="dot"></span>
+      </div>
+      <div class="blank_div"></div>
       <button class="js-fullscreen-button video_player-button">
         <i class="fa fa-arrows-alt" aria-hidden="true"></i>
       </button>
