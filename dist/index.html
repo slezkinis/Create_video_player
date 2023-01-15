@@ -39,6 +39,7 @@
     .video_player-time {
       color: white;
       font-family: 'Roboto', sans-serif;
+      font-size: 20px;
     }
     .video_progress {
       display: flex;
@@ -83,6 +84,11 @@
       border-color: white;
       margin-top: -3px;
     }
+    .video_duration {
+      color: white;
+      font-size: 20px;
+      font-family: 'Roboto', sans-serif;
+    }
   </style>
 </head>
 <body>
@@ -109,6 +115,9 @@
         <span class="dot"></span>
       </div>
       <div class="blank_div"></div>
+      <div class="video_duration">
+        <span class="js-duration"></span>
+      </div>
       <button class="js-fullscreen-button video_player-button">
         <i class="fa fa-arrows-alt" aria-hidden="true"></i>
       </button>
