@@ -33,9 +33,6 @@
     .video_container {
       flex-grow: 1;
     }
-    .blank_div {
-      flex-grow: 2;
-    }
     .video_player-time {
       color: white;
       font-family: 'Roboto', sans-serif;
@@ -90,10 +87,10 @@
       font-size: 15px;
       font-family: 'Roboto', sans-serif;
     }
-    .player-time-and-progress {
+    .player-time-progress {
       display: flex;
       flex-direction: row;
-      width: 200px;
+      flex-grow: 1;
     }
   </style>
 </head>
@@ -113,7 +110,7 @@
       <button class="js-mute-button video_player-button">
         <i class="fa fa-volume-up" aria-hidden="true"></i>
       </button>
-      <div class="player-time-and-progress">
+      <div class="player-time-progress">
         <div class="video_player-time">
           <span class="js-current-time"></span>
         </div>
@@ -122,7 +119,6 @@
           <span class="dot"></span>
         </div>
       </div>
-      <div class="blank_div"></div>
       <div class="video_duration">
         <span class="js-duration"></span>
       </div>
