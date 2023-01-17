@@ -26,7 +26,7 @@
       cursor: pointer;
       color: white;
       background-color: transparent;
-      font-size: 20px;
+      font-size: 16px;
       height: 40px;
       width: 37px;
     }
@@ -42,11 +42,11 @@
       display: flex;
       flex-direction: row;
       background-color: grey;
-      width: 130px;
       height: 5px;
       border-radius: 20px;
       margin-left: 10px;
-      margin-top: 10px;
+      flex-grow: 1;
+      margin-right: 10px;
     }
     .video_progress_bar {
       background-color: red;
@@ -82,15 +82,11 @@
       border-color: white;
       margin-top: -3px;
     }
-    .video_duration {
-      color: white;
-      font-size: 15px;
-      font-family: 'Roboto', sans-serif;
-    }
     .player-time-progress {
       display: flex;
       flex-direction: row;
       flex-grow: 1;
+      align-items: center;
     }
   </style>
 </head>
@@ -118,9 +114,9 @@
           <div class="js-progress-slider video_progress_bar"></div>
           <span class="dot"></span>
         </div>
-      </div>
-      <div class="video_duration">
-        <span class="js-duration"></span>
+        <div class="video_player-time">
+          <span class="js-duration"></span>
+        </div>
       </div>
       <button class="js-fullscreen-button video_player-button">
         <i class="fa fa-arrows-alt" aria-hidden="true"></i>
